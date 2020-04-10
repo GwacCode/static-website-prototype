@@ -1,7 +1,7 @@
 {
-  "name": "gwac-static-website",
+  "name": "static-website-prototype",
   "version": "1.0.0",
-  "description": "GWAC static website",
+  "description": "GWAC static website prototype",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
@@ -16,16 +16,16 @@
   },
   "scripts": {
     "build": "run-s postcss:prod cleancss",
-    "cleancss": "cleancss styles/main.css -o styles/main.min.css",
-    "postcss": "postcss --verbose styles/tailwind.css -o styles/main.css",
-    "postcss:prod": "postcss --verbose --env production styles/tailwind.css -o styles/main.css",
+    "cleancss": "cleancss css/main.css -o css/main.min.css",
+    "postcss": "postcss --verbose css/tailwind.css -o css/main.css",
+    "postcss:prod": "postcss --verbose --env production css/tailwind.css -o css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://umphy@bitbucket.org/umphy/gwac-static-website.git"
+    "url": "https://github.com/GwacCode/static-website-prototype.git"
   },
   "author": "Sean Hsien",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/umphy/gwac-static-website#readme"
+  "license": "BSD 3-Caluse License",
+  "homepage": ""
 }
