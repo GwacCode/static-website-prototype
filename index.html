@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>GWAC - Glen Waverley Anglican Church</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Glen Waverley Anglican Church" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="icon" href="images/gwac_logo.png" />
+    <link rel="apple-touch-icon" href="images/gwac_logo.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+  </head>
+
+  <body x-data="{ topNavModal: 'close'}">
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
+        experience and security.
+      </p>
+    <![endif]-->
+    <div class="flex flex-col">
+      <div class="h-20"></div>
+      <!-- push section down due to fixed main menu -->
+      <nav class="main fixed flex justify-between h-18 md:h-20 w-screen bg-white px-4 shadow-md z-10">
+        <div id="top_nav_branding" class="md:flex md:justify-center">
+          GWAC
+        </div>
+        <div id="top_nav_menu" class="md:flex md:justify-center">
+          <div class="flex">
+            <!-- <div class="pt-2 pl-3 mr-12">
+						<img class="h-16 md:h-full" src="images/gwac_logo.png" alt="gwac logo" />
+					</div> -->
+            <div class="hidden md:flex items-center justify-between text-gw-blue-darker">
+              <a href="#/">
+                Home
+              </a>
+              <a href="#/visit" class="active">
+                Visit
+              </a>
+              <a href="#/connect">
+                Connect
+              </a>
+              <a href="#/events">
+                Events
+              </a>
+              <a href="#/about">
+                About
+              </a>
+              <a href="#/resources">
+                Resources
+              </a>
+              <a href="#/contact">
+                Contact
+              </a>
+              <a>
+                <svg class="bi bi-person h-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="my-4 md:hidden">
+          <button type="button" @click="topNavModal = 'open'">
+            <svg class="bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <section
+        class="flex flex-col items-center text-center text-white bg-fixed bg-bottom bg-cover bg-no-repeat pt-10 md:pt-16 pb-24"
+        style="background-image: url('./images/ashley-davis-unsplash.png');"
+      >
+        <img alt="logo" class="h-32" src="./images/gwac_logo.png" />
+        <!-- <div class="text-xl text-white font-bold uppercase tracking-tighter">Glen Waverley Anglican Church</div> -->
+        <div class="text-xl font-bold mt-4">Glen Waverley Anglican Church</div>
+        <div class="text-6xl font-bold tracking-wide my-10">
+          WELCOME TO GWAC
+        </div>
+        <div class="mb-10">
+          <div class="hidden md:block">
+            <p class="text-lg md:text-2xl">
+              A caring community making, maturing and mobilising
+            </p>
+            <p class="text-lg md:text-2xl">
+              disciples of Jesus Christ, locally and globally
+            </p>
+          </div>
+          <div class="md:hidden">
+            <p class="text-lg md:text-xl">
+              A caring community making, maturing and mobilising disciples of Jesus Christ, locally and globally
+            </p>
+          </div>
+        </div>
+        <a class="px-10 py-2 border-2 border-white rounded-full text-white hover:bg-white hover:text-gw-blue-dark">Livestream</a>
+      </section>
+
+      <section class="flex flex-col items-center text-center pb-24">
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">Visit us</h1>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="w-10/12">
+            Attend one or more of our services and get a feel for our community!
+          </p>
+          <p class="font-light">
+            See below for our service times:
+          </p>
+        </div>
+        <!-- section header end -->
+        <div class="flex flex-wrap justify-center mb-10 md:mt-10">
+          <div class="mt-10 md:mt-0 flex flex-col justify-between md:w-1/5">
+            <div class="flex flex-col items-center">
+              <img class="h-32 w-32" src="./images/traditional.png" />
+              <h2 class="text-3xl font-bold mt-6 mb-4">Traditional</h2>
+              <div class="flex justify-center">
+                <p class="w-8/12">
+                  A traditional service with the Lord&apos;s Supper
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col font-bold mt-4">
+              <p>8am, Sundays</p>
+              <p>10am, Wednesdays</p>
+            </div>
+          </div>
+          <div class="mt-10 md:mt-0 flex flex-col items-center md:w-4/12 lg:w-1/5">
+            <div class="flex flex-col items-center">
+              <img class="h-32 w-32" src="./images/contemporary.png" />
+              <h2 class="text-3xl font-bold mt-6 mb-4">Contemporary</h2>
+              <div class="flex justify-center">
+                <p class="w-9/12">
+                  A contemporary service designed for all ages with a vibrant program for children
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col font-bold mt-4">
+              <p>10:30am, Sundays</p>
+              <p>5pm, Sundays</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center tracking-wide mt-8">
+          <span class="hidden md:block">
+            All services are located at
+            <strong>800 Waverley Road, Glen Waverley VIC 3150</strong>
+          </span>
+          <span class="flex flex-col items-center md:hidden">
+            <p class="flex flex-col md:flex-row">
+              <span>All services are located at</span>
+              <span><b>800 Waverley Road</b></span>
+              <span><b>Glen Waverley VIC 3150</b></span>
+            </p>
+          </span>
+        </div>
+
+        <!-- <div class="">
+				<iframe class="mt-10" height="450" frameborder="0" style="border:0" allowfullscreen
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.722153265072!2d145.1689203156797!3d-37.89017997973851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63fcf809aaa31%3A0xbecdb587e9429c76!2sGlen+Waverley+Anglican+Church!5e0!3m2!1sen!2sau!4v1553165285035"></iframe>
+			</div> -->
+      </section>
+
+      <section class="flex flex-col items-center text-center bg-gw-yellow pb-24">
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">Get connected</h1>
+        </div>
+        <p class="">
+          Learn how you can get involved in the life of our church.
+        </p>
+        <div class="flex flex-wrap justify-around text-center md:w-10/12 lg:w-8/12">
+          <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+            <h2 class="text-2xl font-bold mb-3">Adult</h2>
+            <div class="flex-grow lg:w-10/12 mb-8">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-yellow-500 rounded-full px-6 py-2"
+            >
+              Find out more
+            </button>
+          </div>
+          <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+            <h2 class="text-2xl font-bold mb-3">Senior</h2>
+            <div class="flex-grow lg:w-10/12 mb-8">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-yellow-500 rounded-full px-6 py-2"
+            >
+              Find out more
+            </button>
+          </div>
+          <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+            <h2 class="text-2xl font-bold mb-3">Young adult</h2>
+            <div class="flex-grow lg:w-10/12 mb-8">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-yellow-500 rounded-full px-6 py-2"
+            >
+              Find out more
+            </button>
+          </div>
+          <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+            <h2 class="text-2xl font-bold mb-3">Youth</h2>
+            <div class="flex-grow lg:w-10/12 mb-8">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-yellow-500 rounded-full px-6 py-2"
+            >
+              Find out more
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center text-center pb-24">
+        <!-- section header -->
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">Upcoming events</h1>
+        </div>
+        <p class="">
+          Upcoming events in the life of the church
+        </p>
+        <div class="flex flex-wrap justify-center w-10/12 mt-16">
+          <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
+            <div class="h-64 w-full bg-cover bg-gray-400" title="training"></div>
+            <div class="text-2xl my-6">Training</div>
+            <button type="button" class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-white rounded-full px-6 py-2">
+              Find out more
+            </button>
+          </div>
+          <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
+            <div class="h-64 w-full bg-cover bg-gray-300" title="young adults retreat"></div>
+            <div class="text-2xl my-6">Young Adults Retreat</div>
+            <button type="button" class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-white rounded-full px-6 py-2">
+              Find out more
+            </button>
+          </div>
+          <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
+            <div class="h-64 w-full bg-cover" style="background-image: url('./images/silhouette-of-people-jumping-935835.png');"></div>
+            <div class="text-2xl my-6">Ignite Camp</div>
+            <button type="button" class="text-blue-800 border border-solid border-blue-800 hover:bg-blue-800 hover:text-white rounded-full px-6 py-2">
+              Find out more
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col items-center text-center text-white bg-gw-blue-dark pb-24">
+        <!-- section header -->
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">About us</h1>
+        </div>
+        <p class="px-4 text-xl w-11/12 md:w-10/12 lg:w-5/12">
+          We are a community of people, following Jesus Christ and are committed to helping others become followers of Jesus.
+        </p>
+        <p class="font-light text-center w-11/12 md:w-10/12 lg:w-6/12 p-4">
+          We seek to help each other live life together on mission as we demonstrate the reality of the rule and reign of God, on earth, as it is in
+          Heaven. Simply put, our story is really HIS story, intersecting with our lives and bringing us individually and collectively, into
+          relationship with himself. The church community is an expression of God’s love for all people and we hope that this story might become your
+          story too.
+        </p>
+        <div class="flex flex-wrap justify-around w-full md:w-10/12 lg:w-8/12">
+          <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
+            <img class="h-24 w-24 rounded-full" alt="our beliefs" src="./images/beliefs.png" />
+            <button type="button" class="border border-solid border-white hover:text-gw-blue-darker hover:bg-white rounded-full px-5 py-2">
+              Our beliefs
+            </button>
+          </div>
+          <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
+            <img class="h-24 w-24 rounded-full" alt="our values" src="./images/values.png" />
+            <button type="button" class="border border-solid border-white hover:text-gw-blue-darker hover:bg-white rounded-full px-5 py-2">
+              Our values
+            </button>
+          </div>
+          <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
+            <img class="h-24 w-24 rounded-full" alt="our team" src="./images/team.png" />
+            <button type="button" class="border border-solid border-white hover:text-gw-blue-darker hover:bg-white rounded-full px-5 py-2">
+              Our team
+            </button>
+          </div>
+          <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
+            <img class="h-24 w-24 rounded-full" alt="our partners" src="./images/partnerships.png" />
+            <button type="button" class="border border-solid border-white hover:text-gw-blue-darker hover:bg-white rounded-full px-5 py-2">
+              Our partners
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center pb-24">
+        <!-- section header -->
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">Resources</h1>
+        </div>
+        <p class="font-light text-center">
+          We have the following resources available for you:
+        </p>
+        <div class="flex flex-wrap w-10/12 lg:w-8/12 md:mt-12">
+          <div
+            x-data="{ focus: false }"
+            class="w-full md:w-4/12 lg:w-3/12 h-48 bg-cover"
+            style="background-image: url('./images/bible-blur-christ-christianity-372326.png"
+          >
+            <a
+              @click="focus = true"
+              @click.away="focus = false"
+              @mouseenter="focus = true"
+              @mouseleave="focus = false"
+              x-bind:class="{ 'border-gw-yellow': focus }"
+              class="cursor-pointer flex justify-center items-center h-full w-full border-solid border-4 border-transparent"
+            >
+              <div class="h-full bg-black opacity-25 hover:opacity-0"></div>
+              <span x-bind:class="{ 'bg-gw-yellow': focus }" class="px-8 py-2 rounded-full opacity-85 bg-white text-center">
+                Sermons
+              </span>
+            </a>
+          </div>
+          <div
+            x-data="{ focus: false }"
+            class="w-full md:w-4/12 lg:w-3/12 h-48 bg-cover"
+            style="background-image: url('./images/matt-botsford-oEth91n2dhQ-unsplash.png"
+          >
+            <a
+              @click="focus = true"
+              @click.away="focus = false"
+              @mouseenter="focus = true"
+              @mouseleave="focus = false"
+              x-bind:class="{ 'border-gw-yellow': focus }"
+              class="cursor-pointer flex justify-center items-center h-full w-full border-solid border-4 border-transparent"
+            >
+              <div class="h-full bg-black opacity-25 hover:opacity-0"></div>
+              <span x-bind:class="{ 'bg-gw-yellow': focus }" class="px-8 py-2 rounded-full opacity-85 bg-white text-center">
+                Discipleship Resources
+              </span>
+            </a>
+          </div>
+          <div
+            x-data="{ focus: false }"
+            class="w-full md:w-4/12 lg:w-3/12 h-48 bg-cover"
+            style="background-image: url('./images/app-apple-calendar-computer-39578.png"
+          >
+            <a
+              @click="focus = true"
+              @click.away="focus = false"
+              @mouseenter="focus = true"
+              @mouseleave="focus = false"
+              x-bind:class="{ 'border-gw-yellow': focus }"
+              class="cursor-pointer flex justify-center items-center h-full w-full border-solid border-4 border-transparent"
+            >
+              <div class="h-full bg-black opacity-25 hover:opacity-0"></div>
+              <span x-bind:class="{ 'bg-gw-yellow': focus }" class="px-8 py-2 rounded-full opacity-85 bg-white text-center">
+                Vision 2025
+              </span>
+            </a>
+          </div>
+          <div
+            x-data="{ focus: false }"
+            class="w-full md:w-4/12 lg:w-3/12 h-48 bg-cover"
+            style="background-image: url('./images/daniel-hjalmarsson-sEApBUS4fIk-unsplash.png"
+          >
+            <a
+              @click="focus = true"
+              @click.away="focus = false"
+              @mouseenter="focus = true"
+              @mouseleave="focus = false"
+              x-bind:class="{ 'border-gw-yellow': focus }"
+              class="cursor-pointer flex justify-center items-center h-full w-full border-solid border-4 border-transparent"
+            >
+              <div class="h-full bg-black opacity-25 hover:opacity-0"></div>
+              <span x-bind:class="{ 'bg-gw-yellow': focus }" class="px-8 py-2 rounded-full opacity-85 bg-white text-center">
+                Giving
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center bg-gray-400 pb-24">
+        <!-- section header -->
+        <div class="mt-12 mb-4">
+          <h1 class="font-bold text-4xl md:text-6xl">Contact us</h1>
+        </div>
+        <p class="">
+          Got a question? Don&apos;t be shy, contact us!
+        </p>
+        <form class="flex flex-col px-2 w-11/12 md:w-5/12 xl:w-4/12 mt-12">
+          <label class="my-2">
+            <div>Name</div>
+            <input class="form-input w-full" type="text" name="name" />
+          </label>
+          <label class="my-2">
+            <div>Email</div>
+            <input class="form-input w-full" type="email" name="email" />
+          </label>
+          <label class="my-2">
+            <div>Phone</div>
+            <input class="form-input w-full" type="text" name="phone" />
+          </label>
+          <label class="my-2">
+            <div>Subject</div>
+            <input class="form-input w-full" type="text" name="subject" />
+          </label>
+          <label class="my-2">
+            <div>Message</div>
+            <textarea class="form-textarea w-full resize-none" type="text" name="message" rows="5"></textarea>
+          </label>
+
+          <div class="flex justify-center mt-8">
+            <button
+              class="text-blue-800 border-2 border-solid border-blue-800 rounded-full hover:bg-blue-800 hover:text-gray-300 rounded-xl px-16 py-3"
+              type="button"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <footer
+        class="flex flex-col md:flex-row md:flex-wrap items-center text-center md:items-stretch md:text-left text-white bg-gray-800 py-8 px-4 md:px-12"
+      >
+        <div class="flex flex-col justify-between">
+          <p class="text-xl">Glen Waverley Anglican Church</p>
+          <p class="text-xs font-light text-xs">
+            &copy;2019 by Glen Waverley Anglican Church
+          </p>
+        </div>
+        <div class="flex-grow pt-3 md:w-auto"></div>
+        <div class="flex flex-col font-light text-xs">
+          <p>800 Waverley Road, Glen Waverley, VIC 3150</p>
+          <p>(03) 9560 7494</p>
+          <p>admin@gwac.org.au</p>
+        </div>
+      </footer>
+    </div>
+
+    <div x-show="topNavModal === 'open'" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+      <button type="button" class="close-button absolute top-0 right-0 mr-5" aria-label="Close modal" @click="topNavModal = 'close'">
+        <span class="text-5xl">&times;</span>
+      </button>
+      <nav class="modal flex justify-center">
+        <ul class="pt-8 md:pt-16 text-3xl text-blue-900">
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              Home
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4 active">
+              Visit
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              Connect
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              About
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              Resources
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              Events
+            </a>
+          </li>
+          <li class="my-4 py-2">
+            <a href="#" class="p-4">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
