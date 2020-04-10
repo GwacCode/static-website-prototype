@@ -16,8 +16,9 @@
   },
   "scripts": {
     "build": "run-s postcss:prod cleancss",
+    "build:dev": "run-s postcss:dev cleancss",
     "cleancss": "cleancss css/main.css -o css/main.min.css",
-    "postcss": "postcss --verbose css/tailwind.css -o css/main.css",
+    "postcss:dev": "postcss --verbose css/tailwind.css -o css/main.css",
     "postcss:prod": "postcss --verbose --env production css/tailwind.css -o css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
