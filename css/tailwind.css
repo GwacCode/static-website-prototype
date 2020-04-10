@@ -1,0 +1,46 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* purgecss end ignore */
+
+@import "tailwindcss/utilities";
+
+body {
+  font-family: "Poppins", sans-serif;
+  @apply bg-white;
+}
+
+@screen sm {
+  nav a {
+    @apply text-gw-blue-darker no-underline mx-4;
+  }
+}
+
+@screen lg {
+  nav a {
+    @apply text-gw-blue-darker no-underline mx-8;
+  }
+}
+
+nav.main a {
+  @apply border-b-2 border-transparent;
+}
+nav.main a.active,
+nav.main a:hover {
+  @apply border-b-2 border-blue-500;
+}
+nav.modal a {
+  @apply border-l-4 border-transparent my-4;
+}
+nav.modal a.active,
+nav.modal a:hover {
+  @apply border-l-4 border-blue-500;
+}
+
+.material-icons.text-4xl {
+  @apply text-4xl;
+}
+
+.material-icons.text-5xl {
+  @apply text-5xl;
+}
