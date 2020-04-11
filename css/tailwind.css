@@ -7,7 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  @apply bg-white;
+  /* @apply bg-white; */
 }
 
 @screen sm {
@@ -22,12 +22,12 @@ body {
   }
 }
 
-nav.main a {
+#nav-main-list li a {
   @apply border-b-2 border-transparent;
 }
-nav.main a.active,
-nav.main a:hover {
-  @apply border-b-2 border-blue-500;
+#nav-main-list li.active a,
+#nav-main-list li:hover a {
+  @apply border-blue-500;
 }
 nav.modal a {
   @apply border-l-4 border-transparent my-4;
