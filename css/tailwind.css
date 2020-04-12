@@ -37,10 +37,10 @@ nav.modal a:hover {
   @apply border-l-4 border-blue-500;
 }
 
-.material-icons.text-4xl {
-  @apply text-4xl;
+.dimmable {
+  filter: brightness(80%)
 }
 
-.material-icons.text-5xl {
-  @apply text-5xl;
+.dimmable:hover {
+  filter: brightness(100%)
 }
