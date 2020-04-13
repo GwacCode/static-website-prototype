@@ -29,12 +29,12 @@ body {
 #nav-main-list li:hover a {
   @apply border-blue-500;
 }
-nav.modal a {
+#nav-modal-list a {
   @apply border-l-4 border-transparent my-4;
 }
-nav.modal a.active,
-nav.modal a:hover {
-  @apply border-l-4 border-blue-500;
+#nav-modal-list li.active a,
+#nav-modal-list a:hover {
+  @apply border-blue-500;
 }
 
 .dimmable {

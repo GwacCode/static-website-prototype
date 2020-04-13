@@ -479,13 +479,13 @@
       </footer>
     </main>
 
-    <div x-show="topNavModal === 'open'" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+    <nav x-show="topNavModal === 'open'" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
       <button type="button" class="close-button absolute top-0 right-0 mr-5" aria-label="Close modal" @click="topNavModal = 'close'">
         <span class="text-5xl">&times;</span>
       </button>
-      <nav class="modal flex justify-center">
-        <ul class="pt-8 md:pt-16 text-3xl text-blue-900">
-          <li class="my-4 py-2">
+      <div class="flex justify-center">
+        <ul id="nav-modal-list" class="pt-8 md:pt-16 text-3xl text-blue-900">
+          <li class="my-4 py-2 active">
             <a href="#home" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Home
             </a>
@@ -521,8 +521,9 @@
             </a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
+
     <script>
       var navMain = document.getElementById("nav-main");
       var navMainOffset = navMain.getBoundingClientRect().height;
@@ -543,7 +544,11 @@
       }
 
       var spy = new Gumshoe("#nav-main-list a", {
-        offset: navMainOffset + 50,
+        offset: navMainOffset + 100,
+        reflow: true,
+      });
+      var spy = new Gumshoe("#nav-modal-list a", {
+        offset: navMainOffset + 100,
         reflow: true,
       });
     </script>
