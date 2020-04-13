@@ -36,43 +36,39 @@
         <span class="text-5xl">GWAC</span>
       </div>
       <div class="flex justify-center">
-        <!-- <div class="flex"> -->
-        <!-- <div class="pt-2 pl-3 mr-12">
-						<img class="h-16 md:h-full" src="images/gwac_logo.png" alt="gwac logo" />
-					</div> -->
         <ul id="nav-main-list" class="hidden md:flex items-center justify-between text-gw-blue-darker">
           <li>
-            <a href="#home" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'home')">
+            <a href="#home" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Home
             </a>
           </li>
           <li>
-            <a href="#visit" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'visit')">
+            <a href="#visit" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Visit
             </a>
           </li>
           <li>
-            <a href="#connect" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'connect')">
+            <a href="#connect" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Connect
             </a>
           </li>
           <li>
-            <a href="#events" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'events')">
+            <a href="#events" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Events
             </a>
           </li>
           <li>
-            <a href="#about" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'about')">
+            <a href="#about" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               About
             </a>
           </li>
           <li>
-            <a href="#resources" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'resources')">
+            <a href="#resources" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Resources
             </a>
           </li>
           <li>
-            <a href="#contact" class="cursor-pointer" onclick="scrollToTargetOffset(event, 'contact')">
+            <a href="#contact" class="cursor-pointer" @click="scrollToTargetOffset(event)">
               Contact
             </a>
           </li>
@@ -490,37 +486,37 @@
       <nav class="modal flex justify-center">
         <ul class="pt-8 md:pt-16 text-3xl text-blue-900">
           <li class="my-4 py-2">
-            <a href="#home" class="p-4">
+            <a href="#home" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Home
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#visit" class="p-4 active">
+            <a href="#visit" class="p-4 active" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Visit
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#connect" class="p-4">
+            <a href="#connect" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Connect
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#events" class="p-4">
+            <a href="#events" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Events
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#about" class="p-4">
+            <a href="#about" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               About
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#resources" class="p-4">
+            <a href="#resources" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Resources
             </a>
           </li>
           <li class="my-4 py-2">
-            <a href="#connect" class="p-4">
+            <a href="#connect" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'">
               Contact
             </a>
           </li>
@@ -532,9 +528,10 @@
       var navMainOffset = navMain.getBoundingClientRect().height;
       document.body.style.paddingTop = navMainOffset + "px";
 
-      function scrollToTargetOffset(ev, targetId) {
+      function scrollToTargetOffset(ev) {
         ev.preventDefault();
 
+        var targetId = ev.target.getAttribute('href').substring(1);
         var element = document.getElementById(targetId);
         var elementPosition = element.offsetTop;
         var offsetPosition = elementPosition - navMainOffset;
