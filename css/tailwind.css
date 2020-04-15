@@ -7,18 +7,20 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  /* @apply bg-white; */
+  @apply bg-white;
 }
 
-@screen sm {
-  nav a {
-    @apply text-gw-blue-darker no-underline mx-4;
+nav a {
+  @apply text-gw-blue-darker no-underline;
+}
+
+@screen md {
+  .dimmable {
+    filter: brightness(80%);
   }
-}
 
-@screen lg {
-  nav a {
-    @apply text-gw-blue-darker no-underline mx-8;
+  .dimmable:hover {
+    filter: brightness(100%);
   }
 }
 
@@ -35,12 +37,4 @@ body {
 #nav-modal-list li.active a,
 #nav-modal-list a:hover {
   @apply border-blue-500;
-}
-
-.dimmable {
-  filter: brightness(80%)
-}
-
-.dimmable:hover {
-  filter: brightness(100%)
 }
