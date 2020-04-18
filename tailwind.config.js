@@ -2,9 +2,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gw-blue-dark": "#1e84a7",
-        "gw-blue-darker": "#0f4254",
-        "gw-yellow": "#ffd33c",
+        "gw-blue": "#008ad1",
+        "gw-blue-dark": "#2384a7",
+        "gw-blue-darker": "#104354",
+        "gw-yellow": "#f9d35b",
       },
       fontSize: {
         "7xl": "5rem",
