@@ -246,7 +246,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
             </p>
           </div>
-          <a href=""
+          <a href="./youth.html"
             class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
@@ -460,7 +460,7 @@
     </footer>
   </main>
 
-  <nav x-show="topNavModal === 'open'" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+  <nav x-show="topNavModal === 'open'" class="hidden z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
     <button type="button" class="close-button absolute top-0 right-0 mr-6" aria-label="Close modal"
       @click="topNavModal = 'close'" @touchstart="event.preventDefault(); topNavModal = 'close'">
       <span class="text-5xl">&times;</span>
@@ -541,10 +541,6 @@
       });
     }
 
-    if (location.hash.length > 0) {
-      scrollToOffset(location.hash)
-    }
-
     var spy = new Gumshoe("#nav-main-list a", {
       offset: navMainOffset + 100,
       reflow: true,
@@ -553,6 +549,12 @@
       offset: navMainOffset + 100,
       reflow: true,
     });
+
+    setTimeout(function () {
+      if (location.hash.length > 0) {
+        scrollToOffset(location.hash)
+      }
+    }, 200);
   </script>
 </body>
 

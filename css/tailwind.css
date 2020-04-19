@@ -10,6 +10,17 @@ body {
   @apply bg-white;
 }
 
+a {
+  @apply underline;
+}
+
+.breadcrumb > a {
+  @apply no-underline;
+}
+.breadcrumb > a:hover {
+  @apply underline;
+}
+
 nav a {
   @apply text-gw-blue-darker no-underline;
 }
