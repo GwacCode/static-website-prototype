@@ -20,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
-<body x-data="{ topNavModal: 'close'}">
+<body x-data="{ showNavModal: false}">
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
@@ -35,38 +35,38 @@
     <div class="flex justify-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)"
+            @touchend.prevent="handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)"
-            @touchstart="handleScrollTo(event)">
+          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
             Contact
           </a>
         </li>
@@ -81,8 +81,8 @@
       <!-- </div> -->
     </div>
     <div class="my-4 mx-2 sm:mx-4 lg:hidden">
-      <button type="button" @click="topNavModal = 'open'" @touchstart="event.preventDefault(); topNavModal = 'open'">
-        <svg class="bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <button type="button" @click="showNavModal = true" @touchend="showNavModal = true">
+        <svg class=" bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" />
         </svg>
@@ -460,52 +460,52 @@
     </footer>
   </main>
 
-  <nav x-show="topNavModal === 'open'" class="hidden z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
-    <button type="button" class="close-button absolute top-0 right-0 mr-6" aria-label="Close modal"
-      @click="topNavModal = 'close'" @touchstart="event.preventDefault(); topNavModal = 'close'">
+  <nav x-show="showNavModal === true" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+    <button type="button" class="close-button absolute top-0 right-0 mr-8" aria-label="Close modal"
+      @click="showNavModal = false" @touchend.prevent="showNavModal = false">
       <span class="text-5xl">&times;</span>
     </button>
     <div class="flex justify-center">
       <ul id="nav-modal-list" class="pt-8 md:pt-16 text-3xl text-blue-900">
         <li class="my-4 py-2">
-          <a href="#home" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#home" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Home
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#visit" class="p-4 active" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#visit" class="p-4 active" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Visit
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#connect" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#connect" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Connect
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#events" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#events" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Events
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#about" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#about" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             About
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#resources" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#resources" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Resources
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#contact" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
-            @touchstart="handleScrollTo(event); topNavModal = 'close'">
+          <a href="#contact" class="p-4" @click="handleScrollTo(event); showNavModal = false"
+            @touchend="handleScrollTo(event); showNavModal = false">
             Contact
           </a>
         </li>
@@ -521,7 +521,6 @@
 
     function handleScrollTo(ev) {
       ev.preventDefault();
-
       var targetId = ev.target.getAttribute('href');
       scrollToOffset(targetId);
     }
@@ -551,6 +550,9 @@
     });
 
     setTimeout(function () {
+      // avoid flickering
+      document.getElementById('id-modal-menu').classList.remove('hidden');
+
       if (location.hash.length > 0) {
         scrollToOffset(location.hash)
       }
