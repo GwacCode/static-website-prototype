@@ -35,44 +35,38 @@
     <div class="flex justify-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)"
+            @touchstart="handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Contact
           </a>
         </li>
@@ -98,7 +92,8 @@
 
   <main class="flex flex-col">
     <section class="flex flex-col items-center text-center pb-24">
-      <div class="relative h-56 w-full flex justify-center items-center bg-blue-400 text-white">
+      <div class="relative h-56 w-full flex justify-center items-center bg-blue-400 text-white"
+        style="background-image: linear-gradient(to bottom right, #346d7f, #849ca4);">
         <div class="absolute top-0 left-0 pl-12 pt-4 tracking-wide">Connect <span class="px-1">&gt;</span> Adults</div>
         <h1 class="flex-grow text-6xl font-bold">Adults</h1>
       </div>
@@ -187,44 +182,44 @@
     <div class="flex justify-center">
       <ul id="nav-modal-list" class="pt-8 md:pt-16 text-3xl text-blue-900">
         <li class="my-4 py-2">
-          <a href="#home" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#home" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Home
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#visit" class="p-4 active" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#visit" class="p-4 active" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Visit
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#connect" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#connect" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Connect
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#events" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#events" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Events
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#about" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#about" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             About
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#resources" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#resources" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Resources
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#contact" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#contact" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Contact
           </a>
         </li>
@@ -232,40 +227,11 @@
     </div>
   </nav>
 
-  <script src="./js/modernizr.js"></script>
   <script>
     var hasTouch = document.documentElement.classList.contains('touchevents');
     var navMain = document.getElementById("nav-main");
     var navMainOffset = navMain.getBoundingClientRect().height;
     document.body.style.paddingTop = navMainOffset + "px";
-
-    function scrollToTargetOffset(ev) {
-      ev.preventDefault();
-
-      if (hasTouch && ev.type === 'click') {
-        // if device has touchevents, then use touch
-        return;
-      }
-
-      var targetId = ev.target.getAttribute('href').substring(1);
-      var element = document.getElementById(targetId);
-      var elementPosition = element.offsetTop;
-      var offsetPosition = elementPosition - navMainOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-
-    var spy = new Gumshoe("#nav-main-list a", {
-      offset: navMainOffset + 100,
-      reflow: true,
-    });
-    var spy = new Gumshoe("#nav-modal-list a", {
-      offset: navMainOffset + 100,
-      reflow: true,
-    });
   </script>
 </body>
 

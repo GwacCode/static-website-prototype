@@ -35,44 +35,38 @@
     <div class="flex justify-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)"
+            @touchstart="handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="scrollToTargetOffset(event)"
-            @touchstart="scrollToTargetOffset(event)">
+          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
             Contact
           </a>
         </li>
@@ -87,7 +81,7 @@
       <!-- </div> -->
     </div>
     <div class="my-4 mx-2 sm:mx-4 lg:hidden">
-      <button type="button" @click="topNavModal = 'open'" @touchstart="topNavModal = 'open'">
+      <button type="button" @click="topNavModal = 'open'" @touchstart="event.preventDefault(); topNavModal = 'open'">
         <svg class="bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" />
@@ -467,51 +461,51 @@
   </main>
 
   <nav x-show="topNavModal === 'open'" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
-    <button type="button" class="close-button absolute top-0 right-0 mr-5" aria-label="Close modal"
-      @click="topNavModal = 'close'" @touchstart="topNavModal = 'close'">
+    <button type="button" class="close-button absolute top-0 right-0 mr-6" aria-label="Close modal"
+      @click="topNavModal = 'close'" @touchstart="event.preventDefault(); topNavModal = 'close'">
       <span class="text-5xl">&times;</span>
     </button>
     <div class="flex justify-center">
       <ul id="nav-modal-list" class="pt-8 md:pt-16 text-3xl text-blue-900">
         <li class="my-4 py-2">
-          <a href="#home" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#home" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Home
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#visit" class="p-4 active" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#visit" class="p-4 active" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Visit
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#connect" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#connect" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Connect
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#events" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#events" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Events
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#about" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#about" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             About
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#resources" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#resources" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Resources
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#contact" class="p-4" @click="scrollToTargetOffset(event); topNavModal = 'close'"
-            @touchstart="scrollToTargetOffset(event); topNavModal = 'close'">
+          <a href="#contact" class="p-4" @click="handleScrollTo(event); topNavModal = 'close'"
+            @touchstart="handleScrollTo(event); topNavModal = 'close'">
             Contact
           </a>
         </li>
@@ -519,23 +513,25 @@
     </div>
   </nav>
 
-  <script src="./js/modernizr.js"></script>
   <script>
     var hasTouch = document.documentElement.classList.contains('touchevents');
     var navMain = document.getElementById("nav-main");
     var navMainOffset = navMain.getBoundingClientRect().height;
     document.body.style.paddingTop = navMainOffset + "px";
 
-    function scrollToTargetOffset(ev) {
+    function handleScrollTo(ev) {
       ev.preventDefault();
 
-      if (hasTouch && ev.type === 'click') {
-        // if device has touchevents, then use touch
+      var targetId = ev.target.getAttribute('href');
+      scrollToOffset(targetId);
+    }
+
+    function scrollToOffset(targetId) {
+      var element = document.querySelector(targetId);
+      if (!element) {
         return;
       }
 
-      var targetId = ev.target.getAttribute('href').substring(1);
-      var element = document.getElementById(targetId);
       var elementPosition = element.offsetTop;
       var offsetPosition = elementPosition - navMainOffset;
 
@@ -543,6 +539,10 @@
         top: offsetPosition,
         behavior: "smooth",
       });
+    }
+
+    if (location.hash.length > 0) {
+      scrollToOffset(location.hash)
     }
 
     var spy = new Gumshoe("#nav-main-list a", {
