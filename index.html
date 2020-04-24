@@ -18,6 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gumshoe/5.1.1/gumshoe.polyfills.min.js"
     integrity="sha256-nxQlu6aVkhkHICQuYc1Ga85x2MX+FpvJYV1F+O8Awy8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </head>
 
 <body x-data="{ showNavModal: false}">
@@ -451,7 +452,20 @@
           &copy;2019 by Glen Waverley Anglican Church
         </p>
       </div>
-      <div class="flex-grow pt-3 md:w-auto"></div>
+      <div class="flex-grow flex justify-center items-center space-x-8 px-4 my-4 md:my-0">
+        <div>
+          <ion-icon name="logo-facebook" class="text-white text-4xl hover:text-gw-blue-dark hover:bg-white">
+          </ion-icon>
+        </div>
+        <div>
+          <ion-icon name="logo-instagram" class="text-white text-4xl hover:text-red-400 hover:bg-white p-0 m-0">
+          </ion-icon>
+        </div>
+        <div>
+          <ion-icon name="logo-vimeo" class="text-white text-4xl hover:text-gw-blue-dark hover:bg-white p-0 m-0">
+          </ion-icon>
+        </div>
+      </div>
       <div class="flex flex-col font-light text-xs">
         <p>800 Waverley Road, Glen Waverley, VIC 3150</p>
         <p>(03) 9560 7494</p>
