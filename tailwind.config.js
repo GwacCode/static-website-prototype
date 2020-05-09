@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./*.html"],
   theme: {
     extend: {
       colors: {

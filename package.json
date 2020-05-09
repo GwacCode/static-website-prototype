@@ -3,25 +3,20 @@
   "version": "1.0.0",
   "description": "GWAC static website prototype",
   "main": "index.html",
+  "scripts": {
+    "build": "run-s tailwindcss cleancss",
+    "build:prod": "cross-env NODE_ENV=production run-s tailwindcss cleancss",
+    "cleancss": "cleancss css/main.css -o css/main.min.css",
+    "tailwindcss": "tailwind build css/tailwind.css -c tailwind.config.js -o css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
   "dependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.2.0",
-    "autoprefixer": "^9.7.5",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.1"
-  },
-  "scripts": {
-    "build": "run-s postcss:dev cleancss",
-    "build:prod": "run-s postcss:prod cleancss",
-    "cleancss": "cleancss css/main.css -o css/main.min.css",
-    "postcss:dev": "postcss --verbose css/tailwind.css -o css/main.css",
-    "postcss:prod": "postcss --verbose --env production css/tailwind.css -o css/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cross-env": "^7.0.2",
+    "npm-run-all": "^4.1.5"
   },
   "repository": {
     "type": "git",
@@ -29,5 +24,5 @@
   },
   "author": "Sean Hsien",
   "license": "BSD 3-Caluse License",
-  "homepage": ""
+  "homepage": "."
 }
