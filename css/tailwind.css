@@ -10,10 +10,6 @@ body {
   @apply bg-white;
 }
 
-a {
-  @apply underline;
-}
-
 .breadcrumb > a {
   @apply no-underline;
 }

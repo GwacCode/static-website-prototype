@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="./images/gwac-logo.png" />
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="./css/main.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gumshoe/5.1.1/gumshoe.polyfills.min.js"
     integrity="sha256-nxQlu6aVkhkHICQuYc1Ga85x2MX+FpvJYV1F+O8Awy8=" crossorigin="anonymous"></script>
@@ -92,43 +92,43 @@
   </nav>
 
   <main class="flex flex-col">
-    <section id="home"
-      class="flex flex-col items-center text-center text-white bg-fixed bg-bottom bg-cover bg-no-repeat pt-10 md:pt-16 px-8 pb-24"
-      style="background-image: url('./images/gwac-welcome-banner.png');">
+    <section id="home" class="flex flex-col items-center text-center text-gw-blue-darker pt-10 md:pt-16 px-8">
       <img alt="logo" class="h-32" src="./images/gwac-logo.png" />
       <!-- <div class="text-xl text-white font-bold uppercase tracking-tighter">Glen Waverley Anglican Church</div> -->
-      <div class="text-xl font-bold mt-4">Glen Waverley Anglican Church</div>
-      <div class="text-6xl font-bold tracking-wide my-10">
+      <div class="font-bold mt-4">Glen Waverley Anglican Church</div>
+      <div class="text-5xl font-semibold my-4">
         WELCOME TO GWAC
       </div>
       <div class="mb-10">
         <div class="hidden md:block">
-          <p class="text-lg md:text-2xl">
+          <p class="font-light text-lg md:text-xl">
             A caring community making, maturing and mobilising
           </p>
-          <p class="text-lg md:text-2xl">
+          <p class="font-light text-lg md:text-xl">
             disciples of Jesus Christ, locally and globally
           </p>
         </div>
         <div class="md:hidden">
-          <p class="text-lg md:text-xl">
+          <p class="font-light text-base md:text-base">
             A caring community making, maturing and mobilising disciples of Jesus Christ, locally and globally
           </p>
         </div>
       </div>
       <a
         class="px-10 py-2 border-2 border-white rounded-full text-white hover:bg-white hover:text-gw-blue-dark">Livestream</a>
+      <img alt="hill" src="./images/home-page-hill.png" />
     </section>
 
-    <section id="visit" class="flex flex-col items-center text-center px-8 pb-24">
+    <section id="visit" class="flex flex-col items-center text-center text-white px-8 pb-24"
+      style="background-image: linear-gradient(#44c8f4, #2990b5);">
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">Visit us</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">Visit us</h1>
       </div>
       <div class="flex flex-col items-center px-4">
-        <p>
+        <p class="font-light">
           Attend one or more of our services and get a feel for our community!
         </p>
-        <p>
+        <p class="font-light">
           See below for our service times:
         </p>
       </div>
@@ -138,9 +138,9 @@
           <div class="flex-grow flex flex-col justify-between">
             <div class="flex-grow flex flex-col items-center">
               <img class="h-32 w-32" src="./images/traditional.png" />
-              <h2 class="text-3xl font-bold mt-6 mb-4">Traditional</h2>
+              <h2 class="text-3xl font-semibold mt-6 mb-4">Traditional</h2>
               <div class="flex-grow flex justify-center">
-                <p class="w-8/12">
+                <p class="w-8/12 font-light">
                   A traditional service with the Lord&apos;s Supper
                 </p>
               </div>
@@ -151,8 +151,7 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <a href=""
-              class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8">
+            <a href="" class="text-white border border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
               Find out more
             </a>
           </div>
@@ -161,9 +160,9 @@
           <div class="flex-grow flex flex-col justify-between">
             <div class="flex flex-col items-center">
               <img class="h-32 w-32" src="./images/contemporary.png" />
-              <h2 class="text-3xl font-bold mt-6 mb-4">Contemporary</h2>
+              <h2 class="text-3xl font-semibold mt-6 mb-4">Contemporary</h2>
               <div class="flex justify-center">
-                <p class="w-9/12">
+                <p class="w-9/12 font-light">
                   A contemporary service designed for all ages with a vibrant program for children
                 </p>
               </div>
@@ -174,40 +173,27 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <a href=""
-              class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8">
+            <a href="" class="text-white border border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
               Find out more
             </a>
           </div>
         </div>
       </div>
-      <!-- <div class="flex justify-center tracking-wide mt-8">
-        <span class="hidden md:block">
-          All services are located at
-          <strong>800 Waverley Road, Glen Waverley VIC 3150</strong>
-        </span>
-        <span class="flex flex-col items-center md:hidden">
-          <p class="flex flex-col md:flex-row">
-            <span>All services are located at</span>
-            <span><b>800 Waverley Road</b></span>
-            <span><b>Glen Waverley VIC 3150</b></span>
-          </p>
-        </span>
-      </div> -->
     </section>
 
-    <section id="connect" class="flex flex-col items-center text-center bg-gw-yellow px-8 pb-24">
+    <section id="connect" class="flex flex-col items-center text-center px-8 pb-24"
+      style="background-image: linear-gradient(#ffed5a, #f9d35b);">
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">Get connected</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">Get connected</h1>
       </div>
-      <p class="">
+      <p class="font-light">
         Learn how you can get involved in the life of our church.
       </p>
       <div class="flex flex-wrap justify-around text-center md:w-10/12 lg:w-8/12">
         <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
-          <h2 class="text-2xl font-bold mb-3">Adult</h2>
+          <h2 class="text-2xl font-semibold mb-3">Adult</h2>
           <div class="flex-grow lg:w-10/12 mb-8">
-            <p>
+            <p class="font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
             </p>
           </div>
@@ -217,9 +203,9 @@
           </a>
         </div>
         <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
-          <h2 class="text-2xl font-bold mb-3">Senior</h2>
+          <h2 class="text-2xl font-semibold mb-3">Senior</h2>
           <div class="flex-grow lg:w-10/12 mb-8">
-            <p>
+            <p class="font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
             </p>
           </div>
@@ -229,9 +215,9 @@
           </a>
         </div>
         <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
-          <h2 class="text-2xl font-bold mb-3">Young adult</h2>
+          <h2 class="text-2xl font-semibold mb-3">Young adult</h2>
           <div class="flex-grow lg:w-10/12 mb-8">
-            <p>
+            <p class="font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
             </p>
           </div>
@@ -241,9 +227,33 @@
           </a>
         </div>
         <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
-          <h2 class="text-2xl font-bold mb-3">Youth</h2>
+          <h2 class="text-2xl font-semibold mb-3">Youth</h2>
           <div class="flex-grow lg:w-10/12 mb-8">
-            <p>
+            <p class="font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+            </p>
+          </div>
+          <a href="./youth.html"
+            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            Find out more
+          </a>
+        </div>
+        <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+          <h2 class="text-2xl font-semibold mb-3">Children &amp; families</h2>
+          <div class="flex-grow lg:w-10/12 mb-8">
+            <p class="font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
+            </p>
+          </div>
+          <a href="./youth.html"
+            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            Find out more
+          </a>
+        </div>
+        <div class="flex flex-col items-center w-10/12 md:w-4/12 mt-12">
+          <h2 class="text-2xl font-semibold mb-3">Mandarin</h2>
+          <div class="flex-grow lg:w-10/12 mb-8">
+            <p class="font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ante tortor.
             </p>
           </div>
@@ -258,14 +268,14 @@
     <section id="events" class="flex flex-col items-center text-center px-8 pb-24">
       <!-- section header -->
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">Upcoming events</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">Upcoming events</h1>
       </div>
-      <p class="">
+      <p class="font-light">
         Upcoming events in the life of the church
       </p>
       <div class="flex flex-wrap justify-center w-10/12 mt-16">
         <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
-          <div class="h-64 w-full bg-cover bg-gray-400" title="training"></div>
+          <img class="h-64 w-full bg-cover bg-gray-400" title="training" />
           <div class="text-2xl my-6">Training</div>
           <a href=""
             class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
@@ -273,16 +283,15 @@
           </a>
         </div>
         <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
-          <div class="h-64 w-full bg-cover bg-gray-300" title="young adults retreat"></div>
+          <img class="h-64 w-full bg-cover bg-gray-300" title="young adults retreat" />
           <div class="text-2xl my-6">Young Adults Retreat</div>
           <a href=""
             class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
-        <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
-          <div class="h-64 w-full bg-cover"
-            style="background-image: url('./images/silhouette-of-people-jumping-935835.png');"></div>
+        <div class="flex flex-col justify-between items-center md:w-4/12 mb-10 md:mb-0">
+          <img class="h-64 w-full bg-cover" src="./images/silhouette-of-people-jumping-935835.png" />
           <div class="text-2xl my-6">Ignite Camp</div>
           <a href=""
             class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
@@ -292,20 +301,19 @@
       </div>
     </section>
 
-    <section id="about" class="flex flex-col items-center text-center text-white bg-gw-blue-dark px-8 pb-24">
+    <section id="about" class="flex flex-col items-center text-center text-white px-8 pb-24"
+      style="background-image: linear-gradient(#2283a6, #104354);">
       <!-- section header -->
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">About us</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">About us</h1>
       </div>
-      <p class="px-4 text-xl w-11/12 md:w-10/12 lg:w-5/12">
-        We are a community of people, following Jesus Christ and are committed to helping others become followers of
-        Jesus.
+      <p class="font-bold px-4 w-11/12 md:w-8/12 lg:w-5/12">
+        We are a community of people, following Jesus Christ and are committed to helping others
+        become followers of Jesus.
       </p>
       <p class="font-light text-center w-11/12 md:w-10/12 lg:w-6/12 p-4">
-        We seek to help each other live life together on mission as we demonstrate the reality of the rule and reign of
-        God, on earth, as it is in Heaven. Simply put, our story is really HIS story, intersecting with our lives and
-        bringing us individually and collectively, into relationship with himself. The church community is an expression
-        of God’s love for all people and we hope that this story might become your story too.
+        We seek to help each other live life together on mission as we demonstrate the reality
+        of the rule and reign of God, on earth, as it is in Heaven.
       </p>
       <div class="flex flex-wrap justify-around w-full md:w-10/12 lg:w-8/12">
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
@@ -338,7 +346,7 @@
     <section id="resources" class="flex flex-col items-center px-8 pb-24">
       <!-- section header -->
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">Resources</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">Resources</h1>
       </div>
       <p class="font-light text-center">
         We have the following resources available for you:
@@ -398,12 +406,12 @@
     <section id="contact" class="flex flex-col items-center bg-gray-300 px-8 pb-24">
       <!-- section header -->
       <div class="mt-12 mb-4">
-        <h1 class="font-bold text-4xl md:text-6xl">Contact us</h1>
+        <h1 class="font-semibold text-4xl md:text-6xl">Contact us</h1>
       </div>
-      <p class="">
+      <p class="font-light">
         Got a question? Don&apos;t be shy, contact us!
       </p>
-      <form class="flex flex-col px-2 w-11/12 md:w-5/12 xl:w-4/12 mt-12">
+      <form class="flex flex-col px-2 w-11/12 md:w-6/12 xl:w-4/12 mt-12">
         <label class="my-2">
           <div>Name</div>
           <input class="form-input w-full" type="text" name="name" />
