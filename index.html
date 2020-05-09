@@ -463,14 +463,14 @@
     </section>
 
     <footer
-      class="flex flex-col md:flex-row md:flex-wrap items-center text-center md:items-stretch md:text-left text-white bg-gw-blue-darker py-8 px-4 md:px-12">
+      class="flex flex-col lg:flex-row lg:flex-wrap items-center text-center lg:items-stretch lg:text-left text-white bg-gw-blue-darker py-8 px-4 md:px-12 lg:px-24">
       <div class="flex flex-col justify-between">
-        <p class="text-xl">Glen Waverley Anglican Church</p>
-        <p class="text-xs font-light text-xs">
+        <p class="md:text-xl">Glen Waverley Anglican Church</p>
+        <p class="text-xs font-light tracking-tight">
           &copy;2019 by Glen Waverley Anglican Church
         </p>
       </div>
-      <div class="flex-grow flex justify-center items-center space-x-8 px-4 my-4 md:my-0">
+      <div class="flex-grow flex justify-center items-center space-x-8 px-4 my-4 lg:my-0">
         <div>
           <a href="https://www.facebook.com/GlenWaverleyAnglicanChurch" target="_blank">
             <ion-icon name="logo-facebook" class="rounded text-4xl hover:text-facebook-blue hover:bg-white">
@@ -491,15 +491,17 @@
         </div>
       </div>
       <div class="flex flex-col font-light text-xs">
-        <p>800 Waverley Road, Glen Waverley, VIC 3150</p>
+        <p class="hidden md:inline">800 Waverley Road, Glen Waverley, VIC 3150</p>
+        <p class="md:hidden">800 Waverley Road</p>
+        <p class="md:hidden mb-2">Glen Waverley, VIC 3150</p>
         <p>(03) 9560 7494</p>
         <p>admin@gwac.org.au</p>
       </div>
     </footer>
   </main>
 
-  <nav x-show="showNavModal === true" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
-    <button type="button" class="close-button absolute top-0 right-0 mr-8" aria-label="Close modal"
+  <nav x-show="showNavModal === true" class="hidden z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+    <button type="button" class="close-button absolute top-0 right-0 mr-6" aria-label="Close modal"
       @click="!hasTouch && (showNavModal = false)" @touchstart.prevent="showNavModal = false">
       <span class="text-5xl">&times;</span>
     </button>
