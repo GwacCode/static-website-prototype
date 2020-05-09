@@ -30,7 +30,7 @@
     <![endif]-->
   <nav id="nav-main"
     class="fixed top-0 left-0 flex justify-between items-center h-18 md:h-20 w-screen px-4 bg-white shadow-md z-10">
-    <div id="top_nav_branding" class="flex-grow flex items-center ml-4 lg:ml-8">
+    <div id="top_nav_branding" class="flex-grow flex items-center ml-2 md:ml-4 lg:ml-8">
       <img class="h-6 xl:h-8" src="./images/gwac-text-logo.png" alt="gwac text logo" />
     </div>
     <div class="flex justify-center items-center">
@@ -79,7 +79,7 @@
         </li>
       </ul>
       <a href="https://www.gwac.org.au/livestream" target="_blank"
-        class="text-xs md:text-base ml-4 px-2 py-1 text-red-700 border-2 border-red-700 rounded-full hover:text-white hover:bg-red-700">
+        class="text-xs md:text-base px-2 py-1 text-red-700 border-2 border-red-700 rounded-full hover:text-white hover:bg-red-700">
         Livestream
       </a>
       <a class="hidden lg:flex lg:items-center mx-8">
@@ -91,7 +91,7 @@
       </a>
       <!-- </div> -->
     </div>
-    <div class="flex items-center my-4 mx-2 sm:mx-4 lg:hidden">
+    <div class="flex items-center my-4 ml-4 md:mr-4 lg:hidden">
       <button type="button" @click="!hasTouch && showNavModal = true"
         @touchstart.prevent="hasTouch = true; showNavModal = true">
         <svg class=" bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
