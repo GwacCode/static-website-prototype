@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_2"
+   data-name="Layer 2"
+   viewBox="0 0 1920 271"
+   version="1.1"
+   sodipodi:docname="gwac-homepage-hill.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata55">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     id="namedview53"
+     showgrid="false"
+     inkscape:zoom="1.7383042"
+     inkscape:cx="1076.1656"
+     inkscape:cy="-30.552136"
+     inkscape:window-x="160"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:none;stroke:#104354;stroke-linecap:round;stroke-miterlimit:10;}.cls-2,.cls-7{fill:#2384a7;}.cls-3,.cls-6{fill:#104354;}.cls-3,.cls-4,.cls-7{opacity:0.8;}.cls-4,.cls-8{fill:#48c7f4;}.cls-5{fill:#ffd33e;}</style>
+  </defs>
+  <line
+     class="cls-1"
+     x1="383.5"
+     y1="234.5"
+     x2="383.5"
+     y2="195.5"
+     id="line6" />
+  <line
+     class="cls-1"
+     x1="383.5"
+     y1="212"
+     x2="365.5"
+     y2="205.5"
+     id="line8" />
+  <line
+     class="cls-1"
+     x1="383.5"
+     y1="212"
+     x2="406.5"
+     y2="197.5"
+     id="line10" />
+  <circle
+     class="cls-2"
+     cx="379"
+     cy="172"
+     r="31"
+     id="circle12" />
+  <circle
+     class="cls-3"
+     cx="355"
+     cy="196"
+     r="18"
+     id="circle14" />
+  <circle
+     class="cls-4"
+     cx="412"
+     cy="188"
+     r="14"
+     id="circle16" />
+  <line
+     class="cls-1"
+     x1="1443"
+     y1="218"
+     x2="1443"
+     y2="188"
+     id="line18" />
+  <line
+     class="cls-1"
+     x1="1443"
+     y1="208.15"
+     x2="1453.4"
+     y2="203"
+     id="line20" />
+  <polyline
+     class="cls-1"
+     points="1456.94 191.47 1443 199.83 1423.5 190.37"
+     id="polyline22" />
+  <polyline
+     class="cls-1"
+     points="1518.62 234 1518.64 213 1508.92 197.18"
+     id="polyline24" />
+  <line
+     class="cls-1"
+     x1="1518.64"
+     y1="213"
+     x2="1529"
+     y2="198.28"
+     id="line26" />
+  <line
+     class="cls-1"
+     x1="1518.63"
+     y1="218"
+     x2="1537.76"
+     y2="211.2"
+     id="line28" />
+  <path
+     class="cls-5"
+     d="M619.56,1080C791,1080,858,809,960,809s240.85,271,347.42,271Z"
+     transform="translate(0 -809)"
+     id="path30" />
+  <path
+     class="cls-6"
+     d="M312.25,1080C360,1080,495,1029,595,959S767,857,832,857s152,35,234,112,353.38,111,459.19,111Z"
+     transform="translate(0 -809)"
+     id="path32" />
+  <path
+     class="cls-7"
+     d="M680.92,1080C819,1080,796,901,1094,904c198,0,279.57,176,396.29,176Z"
+     transform="translate(0 -809)"
+     id="path34" />
+  <path
+     class="cls-8"
+     d="M 0,272.15055 C 296,272.15055 688,135 974,135 c 286,0 542,137.15055 946,137.15055 z"
+     id="path36"
+     inkscape:connector-curvature="0"
+     style="fill:#48c7f4;stroke-width:1.00422108" />
+  <circle
+     class="cls-8"
+     cx="1443"
+     cy="171.5"
+     r="22.5"
+     id="circle38" />
+  <circle
+     class="cls-3"
+     cx="1462"
+     cy="187"
+     r="9"
+     id="circle40" />
+  <circle
+     class="cls-2"
+     cx="1456"
+     cy="202"
+     r="5"
+     id="circle42" />
+  <circle
+     class="cls-7"
+     cx="1423.5"
+     cy="178.5"
+     r="14.5"
+     id="circle44" />
+  <circle
+     class="cls-6"
+     cx="1507"
+     cy="180"
+     r="22"
+     id="circle46" />
+  <circle
+     class="cls-2"
+     cx="1545"
+     cy="205"
+     r="13"
+     id="circle48" />
+  <circle
+     class="cls-4"
+     cx="1535"
+     cy="188"
+     r="16"
+     id="circle50" />
+</svg>

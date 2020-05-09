@@ -21,7 +21,7 @@
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </head>
 
-<body x-data="{ showNavModal: false}">
+<body x-data="{ showNavModal: false, hasTouch: false }">
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
@@ -33,45 +33,53 @@
     <div id="top_nav_branding" class="flex items-center ml-4 lg:ml-8">
       <img class="h-6 xl:h-8" src="./images/gwac-text-logo.png" alt="gwac text logo" />
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center items-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)"
-            @touchend.prevent="handleScrollTo(event)">
+          <a href="#home" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#visit" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#connect" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#events" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#about" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#resources" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchend="handleScrollTo(event)">
+          <a href="#contact" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Contact
           </a>
         </li>
       </ul>
+      <a href="https://www.gwac.org.au/livestream" target="_blank"
+        class="hidden md:inline ml-4 px-4 py-2 font-semibold text-red-700 border-2 border-red-700 rounded-full hover:text-white hover:bg-red-700">Livestream</a>
       <a class="hidden lg:flex lg:items-center mx-8">
         <svg class="bi bi-person h-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -82,7 +90,8 @@
       <!-- </div> -->
     </div>
     <div class="my-4 mx-2 sm:mx-4 lg:hidden">
-      <button type="button" @click="showNavModal = true" @touchend="showNavModal = true">
+      <button type="button" @click="!hasTouch && showNavModal = true"
+        @touchstart.prevent="hasTouch = true; showNavModal = true">
         <svg class=" bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" />
@@ -92,7 +101,8 @@
   </nav>
 
   <main class="flex flex-col">
-    <section id="home" class="flex flex-col items-center text-center text-gw-blue-darker pt-10 md:pt-16 px-8">
+    <section id="home" class="flex flex-col items-center text-center text-gw-blue-darker pt-10 md:pt-16 px-8"
+      style="background-image: linear-gradient(#ffffff, #fbddb1);">
       <img alt="logo" class="h-32" src="./images/gwac-logo.png" />
       <!-- <div class="text-xl text-white font-bold uppercase tracking-tighter">Glen Waverley Anglican Church</div> -->
       <div class="font-bold mt-4">Glen Waverley Anglican Church</div>
@@ -114,13 +124,11 @@
           </p>
         </div>
       </div>
-      <a
-        class="px-10 py-2 border-2 border-white rounded-full text-white hover:bg-white hover:text-gw-blue-dark">Livestream</a>
-      <img alt="hill" src="./images/home-page-hill.png" />
+      <img alt="hill" src="./images/gwac-homepage-hill.svg" />
     </section>
 
     <section id="visit" class="flex flex-col items-center text-center text-white px-8 pb-24"
-      style="background-image: linear-gradient(#44c8f4, #2990b5);">
+      style="margin-top: 0; background-image: linear-gradient(#44c8f4, #2990b5);">
       <div class="mt-12 mb-4">
         <h1 class="font-semibold text-4xl md:text-6xl">Visit us</h1>
       </div>
@@ -151,7 +159,7 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <a href="" class="text-white border border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
+            <a href="" class="text-white border-2 border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
               Find out more
             </a>
           </div>
@@ -173,7 +181,7 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <a href="" class="text-white border border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
+            <a href="" class="text-white border-2 border-current rounded-full px-6 py-2 mt-8 hover:bg-gw-blue-dark">
               Find out more
             </a>
           </div>
@@ -318,25 +326,25 @@
       <div class="flex flex-wrap justify-around w-full md:w-10/12 lg:w-8/12">
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
           <img class="h-24 w-24 rounded-full" alt="our beliefs" src="./images/beliefs.png" />
-          <a href="" class="border border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
+          <a href="" class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
             Our beliefs
           </a>
         </div>
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
           <img class="h-24 w-24 rounded-full" alt="our values" src="./images/values.png" />
-          <a href="" class="border border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
+          <a href="" class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
             Our values
           </a>
         </div>
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
           <img class="h-24 w-24 rounded-full" alt="our team" src="./images/team.png" />
-          <a href="" class="border border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
+          <a href="" class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
             Our team
           </a>
         </div>
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
           <img class="h-24 w-24 rounded-full" alt="our partners" src="./images/partners.png" />
-          <a href="" class="border border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
+          <a href="" class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
             Our partners
           </a>
         </div>
@@ -468,7 +476,7 @@
           </a>
         </div>
         <div>
-          <a href="" target="_blank">
+          <a href="https://www.instagram.com/__gwac__/" target="_blank">
             <ion-icon name="logo-instagram" class="rounded-lg text-4xl hover:text-red-600 hover:bg-white">
             </ion-icon>
           </a>
@@ -490,50 +498,50 @@
 
   <nav x-show="showNavModal === true" class="z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
     <button type="button" class="close-button absolute top-0 right-0 mr-8" aria-label="Close modal"
-      @click="showNavModal = false" @touchend.prevent="showNavModal = false">
+      @click="!hasTouch && (showNavModal = false)" @touchstart.prevent="showNavModal = false">
       <span class="text-5xl">&times;</span>
     </button>
     <div class="flex justify-center">
       <ul id="nav-modal-list" class="pt-8 md:pt-16 text-3xl text-blue-900">
         <li class="my-4 py-2">
-          <a href="#home" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#home" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Home
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#visit" class="p-4 active" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#visit" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Visit
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#connect" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#connect" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Connect
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#events" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#events" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Events
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#about" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#about" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             About
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#resources" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#resources" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Resources
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#contact" class="p-4" @click="handleScrollTo(event); showNavModal = false"
-            @touchend="handleScrollTo(event); showNavModal = false">
+          <a href="#contact" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+            @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Contact
           </a>
         </li>
@@ -542,13 +550,14 @@
   </nav>
 
   <script>
-    var hasTouch = document.documentElement.classList.contains('touchevents');
+    // var hasTouch = document.documentElement.classList.contains('touchevents');
     var navMain = document.getElementById("nav-main");
     var navMainOffset = navMain.getBoundingClientRect().height;
     document.body.style.paddingTop = navMainOffset + "px";
 
     function handleScrollTo(ev) {
       ev.preventDefault();
+
       var targetId = ev.target.getAttribute('href');
       scrollToOffset(targetId);
     }
@@ -582,7 +591,7 @@
       document.getElementById('id-modal-menu').classList.remove('hidden');
 
       if (location.hash.length > 0) {
-        scrollToOffset(location.hash)
+        scrollToOffset(location.hash);
       }
     }, 200);
   </script>
