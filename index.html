@@ -563,9 +563,9 @@
 
       var targetId = ev.target.getAttribute('href');
 
-      // if (history.replaceState) {
-      //   history.replaceState(null, null, targetId);
-      // }
+      if (history.replaceState) {
+        history.replaceState(null, null, targetId);
+      }
       scrollToOffset(targetId);
     }
 
