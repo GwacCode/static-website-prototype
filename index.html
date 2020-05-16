@@ -600,13 +600,11 @@
       }
     }, 200);
 
+    // fix chrome mobile touch
     function fixTouchMove(event) {
       return;
     }
-
-    // Remove any previous listners as the page content is ajax loaded and body is never destroyed
     document.body.removeEventListener("touchstart", fixTouchMove);
-    // Event listner that doesn't do anything, but fixes missing eventmove
     document.body.addEventListener("touchstart", fixTouchMove);
   </script>
 </body>
