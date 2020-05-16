@@ -93,7 +93,7 @@
       <!-- </div> -->
     </div>
     <div class="flex items-center my-4 ml-4 md:mr-4 lg:hidden">
-      <button type="button" @click="!hasTouch && showNavModal = true"
+      <button type="button" @click="!hasTouch && (showNavModal = true)"
         @touchstart.prevent="hasTouch = true; showNavModal = true">
         <svg class=" bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path
