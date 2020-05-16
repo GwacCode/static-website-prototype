@@ -37,43 +37,43 @@
     <div class="flex justify-center items-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#home" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#visit" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#connect" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#events" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#about" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#resources" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="!hasTouch && handleScrollTo(event)"
+          <a href="#contact" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
             @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Contact
           </a>
@@ -93,7 +93,7 @@
       <!-- </div> -->
     </div>
     <div class="flex items-center my-4 ml-4 md:mr-4 lg:hidden">
-      <button type="button" @click="!hasTouch && (showNavModal = true)"
+      <button type="button" @click.prevent="!hasTouch && (showNavModal = true)"
         @touchstart.prevent="hasTouch = true; showNavModal = true">
         <svg class=" bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -507,43 +507,43 @@
     <div class="flex justify-center">
       <ul id="nav-modal-list" class="pt-6 md:pt-16 text-3xl text-blue-900">
         <li class="my-4 py-2">
-          <a href="#home" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#home" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Home
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#visit" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#visit" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Visit
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#connect" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#connect" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Connect
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#events" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#events" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Events
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#about" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#about" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             About
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#resources" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#resources" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Resources
           </a>
         </li>
         <li class="my-4 py-2">
-          <a href="#contact" class="p-4" @click="!hasTouch && handleScrollTo(event, showNavModal = false)"
+          <a href="#contact" class="p-4" @click.prevent="!hasTouch && handleScrollTo(event, showNavModal = false)"
             @touchstart.prevent="handleScrollTo(event); showNavModal = false">
             Contact
           </a>
@@ -559,8 +559,6 @@
     document.body.style.paddingTop = navMainOffset + "px";
 
     function handleScrollTo(ev) {
-      ev.preventDefault();
-
       var targetId = ev.target.getAttribute('href');
 
       // if (history.replaceState) {
@@ -601,6 +599,15 @@
         scrollToOffset(location.hash);
       }
     }, 200);
+
+    function fixTouchMove(event) {
+      return;
+    }
+
+    // Remove any previous listners as the page content is ajax loaded and body is never destroyed
+    document.body.removeEventListener("touchstart", fixTouchMove);
+    // Event listner that doesn't do anything, but fixes missing eventmove
+    document.body.addEventListener("touchstart", fixTouchMove);
   </script>
 </body>
 
