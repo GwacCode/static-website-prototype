@@ -107,10 +107,8 @@
       style="background-image: linear-gradient(#ffffff, #fbddb1);">
       <img alt="logo" class="h-32" src="./images/gwac-logo.png" />
       <!-- <div class="text-xl text-white font-bold uppercase tracking-tighter">Glen Waverley Anglican Church</div> -->
-      <div class="font-bold mt-4">Glen Waverley Anglican Church</div>
-      <div class="text-5xl font-semibold my-4">
-        WELCOME TO GWAC
-      </div>
+      <div class="text-sm md:text-base font-semibold mt-4">Glen Waverley Anglican Church</div>
+      <div class="text-3xl sm:text-5xl font-semibold my-4">WELCOME TO GWAC</div>
       <div class="mb-10">
         <div class="hidden md:block">
           <p class="font-light text-lg md:text-xl">
@@ -275,7 +273,7 @@
       </div>
     </section>
 
-    <section id="events" class="flex flex-col items-center text-center px-8 pb-24">
+    <section id="events" class="flex flex-col items-center text-center pb-24">
       <!-- section header -->
       <div class="mt-12 mb-4">
         <h1 class="font-semibold text-4xl md:text-6xl">Upcoming events</h1>
@@ -283,8 +281,8 @@
       <p class="font-light">
         Upcoming events in the life of the church
       </p>
-      <div class="flex flex-wrap justify-center w-10/12 mt-16">
-        <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
+      <div class="flex flex-wrap justify-center w-full md:px-8 mt-16">
+        <div class="flex flex-col justify-between items-center w-full md:w-4/12 mb-10 md:mb-0">
           <img class="h-64 w-full bg-cover bg-gray-400" title="training" />
           <div class="text-2xl my-6">Training</div>
           <a href=""
@@ -292,7 +290,7 @@
             Find out more
           </a>
         </div>
-        <div class="flex flex-col justify-between items-center w-11/12 md:w-4/12 mb-10 md:mb-0">
+        <div class="flex flex-col justify-between items-center w-full md:w-4/12 mb-10 md:mb-0">
           <img class="h-64 w-full bg-cover bg-gray-300" title="young adults retreat" />
           <div class="text-2xl my-6">Young Adults Retreat</div>
           <a href=""
@@ -300,7 +298,7 @@
             Find out more
           </a>
         </div>
-        <div class="flex flex-col justify-between items-center md:w-4/12 mb-10 md:mb-0">
+        <div class="flex flex-col justify-between items-center w-full md:w-4/12 mb-10 md:mb-0">
           <img class="h-64 w-full bg-cover" src="./images/silhouette-of-people-jumping-935835.png" />
           <div class="text-2xl my-6">Ignite Camp</div>
           <a href=""
@@ -595,7 +593,9 @@
       document.getElementById('id-modal-menu').classList.remove('hidden');
 
       if (location.hash.length > 0) {
-        scrollToOffset(location.hash);
+        var hash = location.hash;
+        location.hash = '';
+        scrollToOffset(hash);
       }
     }, 200);
   </script>
