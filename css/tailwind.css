@@ -46,3 +46,26 @@ nav a {
 #nav-modal-list a:hover {
   @apply border-blue-500;
 }
+
+/* modal */
+.modal {
+  display: none;
+}
+.modal.is-open {
+  display: block;
+}
+.modal__overlay {
+  @apply fixed inset-0 flex justify-center items-center;
+  background: rgba(240, 240, 240, 0.6);
+}
+.modal__container {
+  @apply bg-white max-h-screen overflow-y-auto box-border;
+  max-width: 500px;
+}
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+.modal__header .modal__close:before {
+  content: "\2715";
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>GWAC - Glen Waverley Anglican Church</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="Glen Waverley Anglican Church" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="./images/gwac-logo.png" />
+  <link rel="apple-touch-icon" href="./images/gwac_logo.png" />
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gumshoe/5.1.1/gumshoe.polyfills.min.js"
+    integrity="sha256-nxQlu6aVkhkHICQuYc1Ga85x2MX+FpvJYV1F+O8Awy8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+</head>
+
+<body x-data="{ hasTouch: false, showNavModal: false }">
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
+        experience and security.
+      </p>
+    <![endif]-->
+  <nav id="nav-main"
+    class="fixed top-0 left-0 flex justify-between items-center h-18 md:h-20 w-screen px-4 bg-white shadow-md z-10">
+    <div id="top_nav_branding" class="flex items-center ml-4 lg:ml-8">
+      <img class="h-6 xl:h-8" src="./images/gwac-text-logo.png" alt="gwac text logo" />
+    </div>
+    <div class="flex justify-center">
+      <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
+        <li class="mx-4 xl:mx-8">
+          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            Home
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            Visit
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            Connect
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            Events
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            About
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)"
+            @touchstart="handleScrollTo(event)">
+            Resources
+          </a>
+        </li>
+        <li class="mx-4 xl:mx-8">
+          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <a class="hidden lg:flex lg:items-center mx-8">
+        <svg class="bi bi-person h-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z"
+            clip-rule="evenodd" />
+        </svg>
+      </a>
+      <!-- </div> -->
+    </div>
+    <div class="my-4 mx-2 sm:mx-4 lg:hidden">
+      <button type="button" @click="topNavModal = 'open'" @touchstart="topNavModal = 'open'">
+        <svg class="bi bi-list h-8" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="flex flex-col">
+    <section class="flex flex-col items-center text-center pb-24">
+      <div class="relative h-56 w-full flex justify-center items-center bg-blue-400 text-white"
+        style="margin-top: 0; background-image: linear-gradient(to left, #44c8f4, #2990b5);">
+        <div class="absolute top-0 left-0 pl-12 pt-4 tracking-wide breadcrumb">
+          <a href="./index.html#connect"> Connect</a>
+          <span class="px-1">&gt;</span>
+          Our beliefs
+        </div>
+        <h1 class="flex-grow text-6xl font-semibold">Our beliefs</h1>
+      </div>
+
+      <div class="w-10/12 md:w-9/12 xl:w-6/12 mt-16 mb-8">
+        We are an Evangelical Charismatic Anglican Church committed to allowing God, through the Holy Spirit, to build
+        His church by the free use of the Gifts of the Spirit. We believe in the statement of faith as found in the
+        orthodox Creeds and, specifically, we adhere to the following essentials:
+      </div>
+
+      <div class="flex flex-wrap justify-center px-8">
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning God</b></h4>
+          <p class="flex-grow text-left">
+            God is the Creator and Ruler of the Universe. (Genesis 1:1, Ps 90:2) God has eternally existed in three
+            persons: the Father, the Son, and the Holy Spirit. (John 1:1-5, Matthew 28:19) These three…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('Concerning God', 'God is the Creator and Ruler of the Universe. (Genesis 1:1, Ps 90:2) God has eternally existed in three persons: the Father, the Son, and the Holy Spirit. (John 1:1-5, Matthew 28:19) These three are co-eternal and are one God. (1 Peter 1:2) The Godhead is one yet complex. The Father is not the Son. The Son is not the Holy Spirit. But the Father, the Son and the Holy Spirit are equally God.')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning Jesus Christ</b></h4>
+          <p class="flex-grow text-left">
+            Jesus Christ is the Son of God; the Incarnate Word of God and therefore co-equal with the Father. (John
+            1:1-5) Jesus lived a sinless human life (Hebrews 4:14-15) and offered himself as.…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning the Holy Spirit</b></h4>
+          <p class="flex-grow text-left">
+            The Holy Spirit is co-equal with the Father and the Son, was sent and is present in the world to convict
+            people of their sin, (John 16:8) to guide people into all truth (John 16:13) enables us to…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning the Bible</b></h4>
+          <p class="flex-grow text-left">
+            The Bible is the written word of God and as such, is supremely authoritative in all
+            matters of faith and conduct. (2 Timothy 3:14-17) The Bible has been written by human hands.…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning the creation and humanity</b></h4>
+          <p class="flex-grow text-left">
+            All of creation reflects the glory of God but it is separate from God
+            (Genesis 1:27, Psalm 8:3-9). People have been made in the image of God, yet we are disobedient towards God
+            and cut…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning salvation</b></h4>
+          <p class="flex-grow text-left">
+            Salvation is God’s free gift to us but we must accept it. (John 1:12, Romans 10:9) Our
+            attempts at bridging the gap between God and us by trying to do good works will never make up…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col border-t border-gray-400 md:w-3/12 md:mr-8 mt-8 pt-8">
+          <h4 class="text-left mb-4"><b>Concerning the future</b></h4>
+          <p class="flex-grow text-left">
+            The resurrection of Jesus is the guarantee that we will also be raised to life on the
+            last day. (1 Corinthians 15) When Christ returns those who believe in him will be raised to life and live…
+          </p>
+          <div class="w-auto">
+            <button type="button"
+              class="w-36 text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2 mt-8"
+              onclick="openModal('', '')">
+              Find out more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="flex flex-col md:flex-row md:flex-wrap items-center text-center md:items-stretch md:text-left text-white bg-gw-blue-darker py-8 px-4 md:px-12">
+      <div class="flex flex-col justify-between">
+        <p class="text-xl">Glen Waverley Anglican Church</p>
+        <p class="text-xs font-light text-xs">
+          &copy;2019 by Glen Waverley Anglican Church
+        </p>
+      </div>
+      <div class="flex-grow pt-3 md:w-auto"></div>
+      <div class="flex flex-col font-light text-xs">
+        <p>800 Waverley Road, Glen Waverley, VIC 3150</p>
+        <p>(03) 9560 7494</p>
+        <p>admin@gwac.org.au</p>
+      </div>
+    </footer>
+  </main>
+
+  <div class="modal" id="id-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container border border-gray-300 rounded-lg shadow-xl" role="dialog" aria-modal="true"
+        aria-labelledby="id-modal-title">
+        <div class="modal__header flex justify-end px-4 py-2">
+          <button class="modal__close text-3xl text-gray-600" tabindex="-1" aria-label="Close modal"
+            data-micromodal-close>
+          </button>
+        </div>
+        <main class="modal__content px-8 pb-8 -mt-4" id="modal-1-content">
+          <p id="id-modal-title" class="text-lg font-bold mb-2"></p>
+          <p id="id-modal-content"></p>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var hasTouch = document.documentElement.classList.contains('touchevents');
+    var navMain = document.getElementById("nav-main");
+    var navMainOffset = navMain.getBoundingClientRect().height;
+    document.body.style.paddingTop = navMainOffset + "px";
+
+    function openModal(title, content) {
+      document.getElementById('id-modal-title').innerHTML = title;
+      document.getElementById('id-modal-content').innerHTML = content;
+
+      MicroModal.show('id-modal');
+    }
+
+    MicroModal.init();
+  </script>
+</body>
+
+</html>

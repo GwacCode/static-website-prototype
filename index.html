@@ -22,7 +22,7 @@
   <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body x-data="{ showNavModal: false, hasTouch: false }">
+<body x-data="{ hasTouch: false, showNavModal: false }">
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
@@ -207,7 +207,7 @@
             </p>
           </div>
           <a href="./adults.html"
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -219,7 +219,7 @@
             </p>
           </div>
           <a href=""
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -231,7 +231,7 @@
             </p>
           </div>
           <a href=""
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -243,7 +243,7 @@
             </p>
           </div>
           <a href="./youth.html"
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -255,7 +255,7 @@
             </p>
           </div>
           <a href="./youth.html"
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -267,7 +267,7 @@
             </p>
           </div>
           <a href="./youth.html"
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-gw-yellow rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -287,7 +287,7 @@
           <img class="h-64 w-full bg-cover bg-gray-400" title="training" />
           <div class="text-2xl my-6">Training</div>
           <a href=""
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -295,7 +295,7 @@
           <img class="h-64 w-full bg-cover bg-gray-300" title="young adults retreat" />
           <div class="text-2xl my-6">Young Adults Retreat</div>
           <a href=""
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -303,7 +303,7 @@
           <img class="h-64 w-full bg-cover" src="./images/silhouette-of-people-jumping-935835.png" />
           <div class="text-2xl my-6">Ignite Camp</div>
           <a href=""
-            class="text-gw-blue-darker border border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
+            class="text-gw-blue-darker border-2 border-gw-blue-darker hover:bg-gw-blue-darker hover:text-white rounded-full px-6 py-2">
             Find out more
           </a>
         </div>
@@ -327,7 +327,8 @@
       <div class="flex flex-wrap justify-around w-full md:w-10/12 lg:w-8/12">
         <div class="flex flex-col items-center text-center w-10/12 md:w-3/12 mt-10">
           <img class="h-24 w-24 rounded-full" alt="our beliefs" src="./images/beliefs.png" />
-          <a href="" class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
+          <a href="./beliefs.html"
+            class="border-2 border-white hover:text-gw-blue-dark hover:bg-white rounded-full px-5 py-2">
             Our beliefs
           </a>
         </div>
@@ -499,7 +500,7 @@
     </footer>
   </main>
 
-  <nav x-show="showNavModal === true" class="hidden z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-menu">
+  <nav x-show="showNavModal === true" class="hidden z-50 fixed top-0 h-full w-full bg-gw-yellow" id="id-modal-nav">
     <button type="button" class="close-button absolute top-0 right-0 mr-6" aria-label="Close modal"
       @click="!hasTouch && (showNavModal = false)" @touchstart.prevent="showNavModal = false">
       <span class="text-5xl">&times;</span>
@@ -593,7 +594,7 @@
 
     setTimeout(function () {
       // avoid flickering
-      document.getElementById('id-modal-menu').classList.remove('hidden');
+      document.getElementById('id-modal-nav').classList.remove('hidden');
 
       if (location.hash.length > 0) {
         scrollToOffset(location.hash);
