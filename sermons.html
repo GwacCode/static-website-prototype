@@ -37,45 +37,55 @@
     <div id="top_nav_branding" class="flex items-center ml-4 lg:ml-8">
       <img class="h-6 xl:h-8" src="./images/gwac-text-logo.png" alt="gwac text logo" />
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center items-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
-          <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#home" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Home
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#visit" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#visit" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Visit
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#connect" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#connect" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Connect
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#events" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#events" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Events
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#about" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#about" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             About
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#resources" class="cursor-pointer" @click="handleScrollTo(event)"
-            @touchstart="handleScrollTo(event)">
+          <a href="#resources" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Resources
           </a>
         </li>
         <li class="mx-4 xl:mx-8">
-          <a href="#contact" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
+          <a href="#contact" class="cursor-pointer" @click.prevent="!hasTouch && handleScrollTo(event)"
+            @touchstart.prevent="hasTouch = true && handleScrollTo(event)">
             Contact
           </a>
         </li>
       </ul>
+      <a href="https://www.gwac.org.au/livestream" target="_blank"
+        class="text-xs md:text-base px-2 py-1 text-red-700 border-2 border-red-700 rounded-full hover:text-white hover:bg-red-700">
+        Livestream
+      </a>
       <a class="hidden lg:flex lg:items-center mx-8">
         <svg class="bi bi-person h-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -83,7 +93,6 @@
             clip-rule="evenodd" />
         </svg>
       </a>
-      <!-- </div> -->
     </div>
     <div class="my-4 mx-2 sm:mx-4 lg:hidden">
       <button type="button" @click="topNavModal = 'open'" @touchstart="topNavModal = 'open'">
@@ -100,7 +109,7 @@
       <div class="relative h-56 w-full flex justify-center items-center bg-blue-400 text-white"
         style="margin-top: 0; background-image: linear-gradient(to left, #44c8f4, #2990b5);">
         <div class="absolute top-0 left-0 pl-12 pt-4 tracking-wide breadcrumb">
-          <a href="./index.html#connect"> Connect</a>
+          <a href="./index.html#resources"> Resources</a>
           <span class="px-1">&gt;</span>
           Sermons
         </div>
@@ -317,6 +326,11 @@
   </div>
 
   <script>
+    var hasTouch = document.documentElement.classList.contains('touchevents');
+    var navMain = document.getElementById("nav-main");
+    var navMainOffset = navMain.getBoundingClientRect().height;
+    document.body.style.paddingTop = navMainOffset + "px";
+
     var sermons = [
       {
         // url: 'https://download-files.wix.com/_api/download/file?downloadToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImlhdCI6MTU5MDMyNTgwOSwiZXhwIjoxNTkwNTg1MDE5LCJqdGkiOiJlOTVhYmY1ZmY3ZDIiLCJwYXlsb2FkIjp7InBhdGgiOiIvZG93bmxvYWRzLXRtcC9zbXVzaWMvMGIyYzZjXzE1YzEyMzMxNTg2MzQ5NmU4YjFjNjU5NzUzN2Q4ODlkLm1wMy8xNTAzMjU4MTcubXAzIiwiYXR0YWNobWVudCI6eyJmaWxlbmFtZSI6IlBoaWwgTWV1bG1hbiAtIFN1biAyMDIwLTAzLTE1IDEwOjMwIEFNIFRoZW1lOiBJbiBDaHJpc3QubXAzIn19fQ.F_Di9Ah0cOOP4WU75ccWKiuh_mRH1tKxG67ne_8YbDA',

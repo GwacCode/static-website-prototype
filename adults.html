@@ -32,7 +32,7 @@
     <div id="top_nav_branding" class="flex items-center ml-4 lg:ml-8">
       <img class="h-6 xl:h-8" src="./images/gwac-text-logo.png" alt="gwac text logo" />
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center items-center">
       <ul id="nav-main-list" class="hidden lg:flex text-gw-blue-darker">
         <li class="mx-4 xl:mx-8">
           <a href="#home" class="cursor-pointer" @click="handleScrollTo(event)" @touchstart="handleScrollTo(event)">
@@ -71,6 +71,10 @@
           </a>
         </li>
       </ul>
+      <a href="https://www.gwac.org.au/livestream" target="_blank"
+        class="text-xs md:text-base px-2 py-1 text-red-700 border-2 border-red-700 rounded-full hover:text-white hover:bg-red-700">
+        Livestream
+      </a>
       <a class="hidden lg:flex lg:items-center mx-8">
         <svg class="bi bi-person h-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -78,7 +82,6 @@
             clip-rule="evenodd" />
         </svg>
       </a>
-      <!-- </div> -->
     </div>
     <div class="my-4 mx-2 sm:mx-4 lg:hidden">
       <button type="button" @click="topNavModal = 'open'" @touchstart="topNavModal = 'open'">
