@@ -364,8 +364,8 @@
       <div class="flex flex-wrap w-10/12 lg:w-8/12 md:mt-12">
         <div x-data="{ focus: false }" class="dimmable w-full md:w-4/12 lg:w-3/12 h-48 bg-cover"
           style="background-image: url('./images/bible-blur-christ-christianity-372326.png">
-          <a @click="focus = true" @click.away="focus = false" @mouseenter="focus = true" @mouseleave="focus = false"
-            x-bind:class="{ 'border-gw-yellow': focus }"
+          <a @click="focus = true; location.href='./sermons.html'" @click.away="focus = false"
+            @mouseenter="focus = true" @mouseleave="focus = false" x-bind:class="{ 'border-gw-yellow': focus }"
             class="cursor-pointer flex justify-center items-center h-full w-full border-solid border-4 border-transparent">
             <div class="h-full bg-black opacity-25 hover:opacity-0"></div>
             <span x-bind:class="{ 'bg-gw-yellow': focus }"
