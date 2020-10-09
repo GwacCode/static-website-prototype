@@ -1,5 +1,7 @@
 module.exports = {
-  purge: ["./*.html"],
+  purge: {
+    content: ["./*.html"],
+  },
   theme: {
     extend: {
       colors: {
@@ -14,10 +16,10 @@ module.exports = {
       //   "7xl": "5rem",
       // },
       opacity: {
-        "85": "0.85",
+        85: "0.85",
       },
       spacing: {
-        "72": "18rem",
+        72: "18rem",
       },
     },
   },

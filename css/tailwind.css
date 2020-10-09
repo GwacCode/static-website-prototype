@@ -5,12 +5,14 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   @apply bg-white;
 }
-
+a,
+button {
+  touch-action: manipulation;
+}
 .breadcrumb > a {
   @apply no-underline;
 }

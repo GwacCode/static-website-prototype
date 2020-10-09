@@ -8,13 +8,17 @@
     "build:prod": "cross-env NODE_ENV=production run-s tailwindcss cleancss",
     "cleancss": "cleancss css/main.css -o css/main.min.css",
     "tailwindcss": "tailwind build css/tailwind.css -c tailwind.config.js -o css/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
-    "tailwindcss": "^1.4.6"
+    "alpinejs": "^2.3.3",
+    "gumshoejs": "^5.1.2",
+    "ionicons": "^5.0.1",
+    "tailwindcss": "^1.8.12"
   },
   "devDependencies": {
+    "clean-css-cli": "^4.3.0",
     "cross-env": "^7.0.2",
     "npm-run-all": "^4.1.5"
   },
